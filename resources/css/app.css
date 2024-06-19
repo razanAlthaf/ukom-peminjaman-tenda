@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar-logo {
+    width: 200px; /* Atur lebar sesuai kebutuhan */
+    height: auto; /* Pertahankan rasio aspek */
+}

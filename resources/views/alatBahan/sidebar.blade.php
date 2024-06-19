@@ -3,7 +3,7 @@
         <div class="sidebar-header position-relative">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <a href="/dashboard"><img src="{{ asset('dist/assets/compiled/svg/logo.svg') }}" alt="Logo" srcset=""></a>
+                    <a href="/dashboard"><img src="{{ asset('assets/images/logo-tenda.svg') }}" alt="Logo" style="width: 110px; height: 110px"></a>
                 </div>
                 <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
