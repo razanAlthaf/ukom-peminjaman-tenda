@@ -15,11 +15,11 @@
                 <a href="/profile" class="card ms-auto justify-center">
                     <div class="card-body py-2 px-2">
                         <div class="d-flex align-items-center">
-                            <div class="avatar avatar-l">
-                                <img src="{{ asset('dist/assets/compiled/jpg/1.jpg') }}" alt="Face 1">
-                            </div>
-                            <div class="mt-2 ms-2 name">
+                            <div class="mt-2 me-2 name">
                                 <h6 class="font-bold">{{ Auth::user()->name }}</h6>
+                            </div>
+                            <div class="avatar avatar-l">
+                                <img src="{{ asset('dist/assets/compiled/jpg/2.jpg') }}" alt="Face 1">
                             </div>
                         </div>
                     </div>

@@ -26,6 +26,9 @@ Route::middleware(['auth', 'verified', 'role:admin|management|peminjam'])->group
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
+//alat bahan
 Route::middleware(['auth', 'verified', 'role:admin|management'])->group(function () {
-    Route::get('/dataTenda', [AlatBahanController::class, 'index'])->name('alatBahan.index');
+    Route::get('/alatBahans', [AlatBahanController::class, 'index'])->name('alatBahan.index');
 });
+
+Route::resource('alatBahans', AlatBahanController::class);
