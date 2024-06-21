@@ -11,7 +11,7 @@ class AlatBahanController extends Controller
 {
     public function index() 
     {
-        $alatBahans = AlatBahan::paginate(5);
+        $alatBahans = AlatBahan::paginate(10);
         $user = Auth::user();
 
         switch ($user->role) {

@@ -63,7 +63,7 @@
                 </li>
         
                 <li class="sidebar-item">
-                    <a href="/" class='sidebar-link'>
+                    <a href="/sewaTenda" class='sidebar-link'>
                         <i class="bi bi-x-diamond-fill"></i>
                         <span>Sewa Tenda</span>
                     </a>

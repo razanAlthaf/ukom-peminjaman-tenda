@@ -55,14 +55,14 @@
         
                 {{-- Data Alat Bahan --}}
                 <li class="sidebar-title">Data Barang</li>
-                <li class="sidebar-item active">
+                <li class="sidebar-item">
                     <a href="/alatBahans" class='sidebar-link'>
                         <i class="bi bi-x-diamond-fill"></i>
                         <span>Data Tenda</span>
                     </a>
                 </li>
         
-                <li class="sidebar-item">
+                <li class="sidebar-item active">
                     <a href="/sewaTenda" class='sidebar-link'>
                         <i class="bi bi-x-diamond-fill"></i>
                         <span>Sewa Tenda</span>
