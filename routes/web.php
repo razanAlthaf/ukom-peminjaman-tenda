@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AlatBahanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AlatBahanController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SewaTendaController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -32,3 +33,7 @@ Route::middleware(['auth', 'verified', 'role:admin|management'])->group(function
 });
 
 Route::resource('alatBahans', AlatBahanController::class);
+
+
+Route::get('/sewaTenda', [SewaTendaController::class, 'index'])->name('sewa_tendas.index');
+Route::post('/sewaTenda', [SewaTendaController::class, 'store'])->name('sewa_tendas.store');

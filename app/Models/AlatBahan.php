@@ -10,7 +10,6 @@ class AlatBahan extends Model
     use HasFactory;
 
     protected $table = 'alat_bahans';
-    protected $primaryKey = 'id_barang';
 
     protected $fillable = [
         'nama_barang',
@@ -19,5 +18,6 @@ class AlatBahan extends Model
         'kondisi',
         'jumlah_barang',
         'harga',
+        'images',
     ];
 }

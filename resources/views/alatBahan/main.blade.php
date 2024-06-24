@@ -70,7 +70,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {{ $alatBahans->links() }}
+                    {{ $alatBahans->links('vendor.pagination.custom') }}
                 </div>
             </div>
                 

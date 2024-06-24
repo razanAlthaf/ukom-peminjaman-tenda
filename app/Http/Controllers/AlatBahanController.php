@@ -11,12 +11,11 @@ class AlatBahanController extends Controller
 {
     public function index() 
     {
-        $alatBahans = AlatBahan::paginate(10);
+        $alatBahans = AlatBahan::paginate(5);
         $user = Auth::user();
 
         switch ($user->role) {
             case 'admin':
-                return view('alatBahan.main', compact('alatBahans'));
             case 'management':
                 return view('alatBahan.main', compact('alatBahans'));
             default:

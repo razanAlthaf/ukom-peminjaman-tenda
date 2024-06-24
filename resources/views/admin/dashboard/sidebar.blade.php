@@ -61,6 +61,13 @@
                         <span>Data Tenda</span>
                     </a>
                 </li>
+
+                <li class="sidebar-item">
+                    <a href="/dataSewa" class='sidebar-link'>
+                        <i class="bi bi-x-diamond-fill"></i>
+                        <span>Data Sewa Tenda</span>
+                    </a>
+                </li>
         
                 <li class="sidebar-item">
                     <a href="/sewaTenda" class='sidebar-link'>
