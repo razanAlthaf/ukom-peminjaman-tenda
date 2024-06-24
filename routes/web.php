@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DataSewaController;
 use App\Http\Controllers\AlatBahanController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\SewaTendaController;
 
 Route::get('/', function () {
@@ -34,6 +36,14 @@ Route::middleware(['auth', 'verified', 'role:admin|management'])->group(function
 
 Route::resource('alatBahans', AlatBahanController::class);
 
-
+//data sewa
 Route::get('/sewaTenda', [SewaTendaController::class, 'index'])->name('sewa_tendas.index');
 Route::post('/sewaTenda', [SewaTendaController::class, 'store'])->name('sewa_tendas.store');
+
+Route::resource('dataSewa', DataSewaController::class)->except(['show']);
+//generate doc
+Route::get('dataSewa/export', [DataSewaController::class, 'exportDoc'])->name('dataSewa.export');
+
+Route::middleware(['auth', 'verified', 'role:admin|management'])->group(function () {
+    Route::get('/generateLaporan', [LaporanController::class, 'index'])->name('laporan.index');
+});

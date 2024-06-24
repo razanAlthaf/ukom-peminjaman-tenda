@@ -62,7 +62,7 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item active">
+                <li class="sidebar-item">
                     <a href="/dataSewa" class='sidebar-link'>
                         <i class="bi bi-x-diamond-fill"></i>
                         <span>Data Sewa Tenda</span>
@@ -77,7 +77,7 @@
                 </li>
                 {{-- Generate Laporan --}}
                 <li class="sidebar-title">Generate Laporan</li>
-                <li class="sidebar-item">
+                <li class="sidebar-item active">
                     <a href="/generateLaporan" class='sidebar-link'>
                         <i class="bi bi-x-diamond-fill"></i>
                         <span>DOC</span>

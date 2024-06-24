@@ -20,6 +20,11 @@ class SewaTenda extends Model
         'tgl_kembali',
     ];
 
+    protected $dates = [
+        'tgl_sewa',
+        'tgl_kembali',
+    ];
+
     public function alatBahan()
     {
         return $this->belongsTo(AlatBahan::class);

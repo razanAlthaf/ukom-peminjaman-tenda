@@ -13,7 +13,7 @@
 
             <div class="d-flex">
                 <div class="page-heading">
-                    <h3>Data Tenda</h3>
+                    <h3>Data Sewa Tenda</h3>
                 </div>
                 <a href="/profile" class="card ms-auto justify-center">
                     <div class="card-body py-2 px-2">
@@ -29,47 +29,45 @@
                 </a>
             </div>
             <div class="page-content">
-                <div class="container">
-                    <div class="card">
-                        <div class="card-header">
-                            Edit Sewa Tenda
+                <div class="container mt-5">
+                    <h2>Edit Data Sewa</h2>
+                    <form action="{{ route('dataSewa.update', $sewaTenda->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="form-group">
+                            <label for="alat_bahan_id">ID Alat Bahan</label>
+                            <input type="text" name="alat_bahan_id" class="form-control" value="{{ $sewaTenda->alat_bahan_id }}" required>
                         </div>
-                        <div class="card-body">
-                            <form action="{{ route('sewa_tendas.update', $sewaTenda->id) }}" method="POST">
-                                @csrf
-                                @method('PUT')
-                                <div class="mb-3">
-                                    <label for="jumlah_sewa" class="form-label">Jumlah Sewa</label>
-                                    <input type="number" class="form-control" id="jumlah_sewa" name="jumlah_sewa" min="1" value="{{ $sewaTenda->jumlah_sewa }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="nama_penyewa" class="form-label">Nama Penyewa</label>
-                                    <input type="text" class="form-control" id="nama_penyewa" name="nama_penyewa" value="{{ $sewaTenda->nama_penyewa }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="no_hp" class="form-label">No. HP</label>
-                                    <input type="text" class="form-control" id="no_hp" name="no_hp" value="{{ $sewaTenda->no_hp }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="kota_kabupaten" class="form-label">Kota/Kabupaten</label>
-                                    <input type="text" class="form-control" id="kota_kabupaten" name="kota_kabupaten" value="{{ $sewaTenda->kota_kabupaten }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="alamat" class="form-label">Alamat</label>
-                                    <textarea class="form-control" id="alamat" name="alamat" rows="3" required>{{ $sewaTenda->alamat }}</textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="tgl_sewa" class="form-label">Tanggal Sewa</label>
-                                    <input type="date" class="form-control" id="tgl_sewa" name="tgl_sewa" value="{{ $sewaTenda->tgl_sewa }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="tgl_kembali" class="form-label">Tanggal Kembali</label>
-                                    <input type="date" class="form-control" id="tgl_kembali" name="tgl_kembali" value="{{ $sewaTenda->tgl_kembali }}" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                            </form>
+                        <div class="form-group">
+                            <label for="jumlah_sewa">Jml Sewa</label>
+                            <input type="text" name="jumlah_sewa" class="form-control" value="{{ $sewaTenda->jumlah_sewa }}" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="nama_penyewa">Nama Penyewa</label>
+                            <input type="text" name="nama_penyewa" class="form-control" value="{{ $sewaTenda->nama_penyewa }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="no_hp">No HP</label>
+                            <input type="text" name="no_hp" class="form-control" value="{{ $sewaTenda->no_hp }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kota_kabupaten">Kota/Kabupaten</label>
+                            <input type="text" name="kota_kabupaten" class="form-control" value="{{ $sewaTenda->kota_kabupaten }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea name="alamat" class="form-control" required>{{ $sewaTenda->alamat }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="tgl_sewa">Tgl Sewa</label>
+                            <input type="date" name="tgl_sewa" class="form-control" value="{{ $sewaTenda->tgl_sewa }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tgl_kembali">Tgl Kembali</label>
+                            <input type="date" name="tgl_kembali" class="form-control" value="{{ $sewaTenda->tgl_kembali }}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
                 </div>
             </div>
 

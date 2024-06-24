@@ -1,6 +1,6 @@
 @include('admin.dashboard.header')
 
-@include('dataSewa.sidebar')
+@include('laporan.sidebar')
 
 <body>
     <script src="assets/static/js/initTheme.js"></script>
@@ -31,6 +31,9 @@
             </div>
             <div class="page-content card py-3">
                 <div class="container">
+                    <div class="d-flex justify-content-end mb-3">
+                        <a href="{{ route('dataSewa.export') }}" class="btn btn-primary mt-3 me-2">Export Data ke Word</a>
+                    </div>
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
@@ -57,7 +60,6 @@
                                     <td>{{ $sewa->tgl_kembali }}</td>
                                     <td>{{ $sewa->jumlah_sewa }}</td>
                                     <td>
-                                        <a href="{{ route('dataSewa.edit', $sewa->id) }}" class="btn btn-warning btn-sm pb-2"><i data-feather="edit" class="bi bi-pencil"></i></a>
                                         <form action="{{ route('dataSewa.destroy', $sewa->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')

@@ -12,7 +12,6 @@ class SewaTendaController extends Controller
 {
     public function index()
     {
-        $sewaTendas = SewaTenda::paginate(5);
         $alatBahans = AlatBahan::all();
         $user = Auth::user();
 
